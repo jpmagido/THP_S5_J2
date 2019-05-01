@@ -1,0 +1,14 @@
+<h1>Hello ma ptite salope !</h1><br><br>
+
+<p>Voici ton potin préféré :</p><br>
+
+
+
+<div class="card" style="width: 600px;">
+  <div class="card-body">
+    <h5 class="card1-title">Auteur: <%= User.find(Gossip.find(@id_lien).user_id).first_name %> <%= User.find(Gossip.find(@id_lien).user_id).last_name %></h5>
+    <h6 class="card1-subtitle mb-2 text-muted">Titre: <%= Gossip.find(@id_lien).title %></h6>
+    <p class="card1-text">Contenu: <%= Gossip.find(@id_lien).content %></p>
+    <a href="http://localhost:3000/user/<%=User.find(Gossip.find(@id_lien).user_id).id%>" class="card1-link">Auteur</a>
+  </div>
+</div>

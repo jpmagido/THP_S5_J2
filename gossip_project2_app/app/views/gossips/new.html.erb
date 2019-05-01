@@ -1,0 +1,21 @@
+<h1>Hello ma ptite salope !</h1><br><br>
+
+<p>Tu vas pouvoir enregister ton propre Gossip via ce formulaire, à toi de jouer !!</p><br><br>
+
+
+
+
+<form action="<%= gossips_path %>" method="POST">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+	<span>Titre de ton gossip: </span><br>
+	<input type="string" name="title"><br><br>
+	<span>Contenu de ton gossip: </span><br>
+	<input type="text" name="gossip_1"><br><br>
+	
+
+	<input type="submit" value="Valider" onclick="window.open('<%= gossips_edit_done_path %>', '_blank')"> 
+
+</form>
+
+  
